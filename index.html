@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KDC-Base | Showcase: Keith D Commiskey (keithdc.com -> kdcinfo.com)</title>
+  <link rel="canonical" href="https://kdcbase.com">
+  <style type='text/css'>
+    body {
+      color: green;
+      font-family: "Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+      font-size: 16px;
+      line-height: 1;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    body .all-content {
+      margin: 0 auto;
+      /*max-width: 1161px;*/
+      max-width: 1260px;
+      text-align: center;
+    }
+      body .all-content {
+        background-color: #ffffff;
+        border: 5px solid green;
+        border-radius: 50px;
+        margin: 1rem auto;
+        padding: 0 1rem;
+      }
+    body div.desc {
+      margin: 0 auto 1.5rem;
+      padding: 0;
+      width: 98%;
+    }
+      body div.desc.desc-main {
+        font-size: 0.95em;
+        line-height: 1.5;
+        margin: 0 auto;
+        max-width: 27rem;
+      }
+      p {
+        line-height: 1.5;
+      }
+      body {
+/*
+        / * background: url(https://kdcinfo.com/db/kdcbase/training_1280-800.png); * /
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: 120%;
+        backdrop-filter: blur(8px) opacity(0.9);
+        background-color: #ffffff;
+        background: repeating-linear-gradient(90deg, #e66465, #e66465 20px, #9198e5 20px, #9198e5 25px);
+*/
+        background: repeating-linear-gradient(90deg, #dfd, #dff 75px, #cdf 150px, #dfd 250px);
+      }
+        header a,
+        footer a {
+          color: #004c6a;
+          font-size: 0.95em;
+        }
+        header a:hover,
+        header a:active,
+        header a:focus,
+        footer a:hover,
+        footer a:active,
+        footer a:focus {
+          color: #008cba;
+          opacity: 0.8;
+        }
+        header a.b,
+        footer a.b {
+          /*color: #008cba;*/
+          color: hsla(195, 100%, 41%, 1);
+          font-weight: normal;
+        }
+        header h1 {
+          color: #43616a;
+          display: inline-block;
+          font-size: 1.9em;
+          line-height: 1.6;
+          margin: 45px 0 5px;
+          padding: 0;
+        }
+        @media screen and (max-width: 560px) {
+          header h1 {
+              margin: 100px 0 5px;
+          }
+        }
+        header h1:hover,
+        header h1:active,
+        header h1:focus {
+          color: #008cba;
+          opacity: 0.8;
+        }
+        header h2.sub {
+          color: #999999;
+          font-size: 1.1em;
+          line-height: 1;
+          margin: 0 0 40px;
+          padding: 0;
+        }
+        header nav#hdrNav {
+          opacity: 0.54;
+        }
+        #hdrLogo h1 {
+          cursor: pointer;
+        }
+
+    .wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 2rem;
+      min-width: 320px;
+      width: 100%;
+    }
+    .wrap {
+      height: 240px;
+      /*margin: 0 auto 15px;*/
+      margin: 0 10px 15px;
+      min-width: 320px;
+      position: relative;
+    }
+    .no-wrap {
+      white-space: nowrap;
+    }
+    .iframeHeader {
+      border-top: 1px solid hsla(195, 100%, 41%, 0.5);
+      /*border: 1px solid hsla(195, 100%, 41%, 0.5);*/
+      /*box-shadow: 0 0 5px 1px hsla(195, 100%, 41%, 0.25);*/
+      margin: 0 auto;
+      padding: 1rem 0 0;
+      width: 95%;
+    }
+    .iframeTrigger {
+      align-items: center;
+      /*background: url('kdcbase_01.jpg') no-repeat left top;*/
+      background-color: #ffffff;
+      border: 2px solid green;
+      box-shadow: 9px 5px 9px 1px rgba(4,38,4,0.55);
+        -moz-box-shadow: 9px 5px 9px 1px rgba(4,38,4,0.55);
+        -webkit-box-shadow: 9px 5px 9px 1px rgba(4,38,4,0.55);
+      color: green;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      font-size: 0.9rem;
+      height: 240px;
+      justify-content: space-around;
+      min-width: 320px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      text-align: center;
+      transform-origin: center;
+      transition: 0.25s all;
+      z-index: 99;
+    }
+      .iframeTrigger > p {
+        font-size: 1.05em;
+      }
+      .iframeTrigger p {
+        font-weight: bold;
+        margin: 0.1rem 0 0;
+        padding: 0;
+      }
+        .iframeTrigger p small {
+          font-weight: normal;
+        }
+      .iframeTrigger img {
+        margin: 0;
+        max-height: 165px;
+        max-width: 300px;
+      }
+      .iframeTrigger:focus,
+      .iframeTrigger:hover {
+        outline: 5px solid rgba(25,150,255,.5);
+        transform: scale(1.1, 1.1);
+        transition: 0.25s all;
+        z-index: 101;
+      }
+      .projectData {
+        line-height: 1.3;
+        margin: 0.1rem 0;
+        padding: 0.2rem 0;
+        z-index: 33;
+      }
+    .iframeI {
+      display: none;
+      height: 725px;
+      left: 2px;
+      position: absolute;
+      top: 23px;
+      width: 1300px;
+    }
+    .unselectable {
+      -moz-user-select: -moz-none;
+      -khtml-user-select: none;
+      -webkit-user-select: none;
+      -o-user-select: none;
+      user-select: none;
+
+      -ms-zoom: 0.23;
+      -moz-transform: scale(0.23);
+      -moz-transform-origin: 0 0;
+      -o-transform: scale(0.23);
+      -o-transform-origin: 0 0;
+      -webkit-transform: scale(0.23);
+      -webkit-transform-origin: 0 0;
+    }
+    .important {
+      color: #aa3300;
+      font-size: 1.05rem;
+    }
+    ul.listNo {
+      list-style: none;
+    }
+    .b {
+      font-weight: bold;
+    }
+    .hide,
+    .hidden {
+      display: none;
+    }
+    .in-development {
+      background-color: rgba(255, 2550, 0, 0.75);
+      font-size: 1.5rem;
+      font-weight: bold;
+      padding: 1rem;
+      position: absolute;
+      z-index: 101;
+      transform: rotate(-20deg);
+    }
+    .no-cursor {
+      cursor: default;
+    }
+    #BaseBody {
+      position: relative;
+      transition: 0.5s all;
+    }
+      #BaseBody.darkmode {
+        background-color: #000000;
+        transition: 0.25s all;
+      }
+      #BaseBody.darkmode header,
+      #BaseBody.darkmode .iframeHeader {
+        filter: brightness(2.0);
+      }
+      .darkmode .wrap .iframeTrigger {
+        background-color: #000;
+        color: #bbffdd;
+      }
+      .darkmode .in-development {
+        color: #000;
+        text-shadow: 2px 2px 2px steelblue;
+      }
+    .show-link,
+    .toggle-mode {
+      background-color: #ffffff;
+      border: 1px solid green;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 0.95em;
+      line-height: 1.6;
+      margin-top: 0.25rem;
+      max-width: 75px;
+      padding: 0.5rem;
+      position: absolute;
+      top: 1rem;
+      z-index: 1;
+      text-align: center;
+    }
+      .show-link {
+        left: 1rem;
+      }
+      .toggle-mode {
+        right: 1rem;
+      }
+      .show-link:focus,
+      .show-link:hover,
+      .toggle-mode:focus,
+      .toggle-mode:hover {
+        border-color: yellow;
+        background-color: darkgreen;
+        color: #ffffff;
+      }
+        .show-link {
+          display: none;
+        }
+
+        /*@media screen and (max-width: 560px) {}*/
+        @media screen and (max-device-width: 560px) {
+          .show-link {
+            /*display: block;*/
+          }
+        }
+  
+    p.devrefs {
+      margin: 10px auto 0;
+    }
+    button, .button {
+      background-color: #008CBA;
+      border-color: #007095;
+      border-radius: 0;
+      border-style: solid;
+      border-width: 0;
+      color: #ffffff;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 1rem;
+      font-family: "Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+      font-weight: normal;
+      line-height: normal;
+      margin: 0 0 1.25rem;
+      padding: 1rem 2rem 1.0625rem 2rem;
+      position: relative;
+      text-align: center;
+      text-decoration: none;
+      transition: background-color 300ms ease-out;
+    }
+    .darkmode button,
+    .darkmode .button {
+      color: #0000A0;
+    }
+    button.devrefs {
+      border: 2px solid transparent;
+      border-radius: 5px;
+      margin: 0;
+      padding: 0.75rem 2rem;
+      text-align: center;
+    }
+    button.devrefs:hover,
+    button.devrefs:focus {
+      background-color: #005CAA;
+      color: yellow;
+    }
+    .darkmode button.devrefs:hover,
+    .darkmode button.devrefs:focus {
+      border: 2px solid yellow;
+      border-radius: 5px;
+      color: #000000;
+    }
+  </style>
+</head>
+<body>
+  <div id="BaseBody" class="all-content">
+    <div class="toggle-mode">Toggle Dark Mode</div>
+        <header>
+            <div id="header" class="desc">
+            <div id="hdrLogo">
+                    <h1 tabindex="0"
+                      onmousedown="this.style.outline='none';"
+                      onclick="this.blur(); goToHome(this);"
+                      onmouseup="this.style.outline=null;"
+                      alt="Showcase for Keith D Commiskey"
+                      title="Showcase for Keith D Commiskey"
+                    >Keith D Commiskey</h1>
+                    <h2 class="sub">Showcase: <span class="no-wrap">App Developer</span></h2>
+                <div>
+                    [&nbsp;<a onclick="goToExternalUrl(this.href);" href="https://kdcinfo.com">Portfolio</a>&nbsp;]&nbsp;
+                    [&nbsp;<a class="b" onclick="return false;">Showcase</a>&nbsp;]&nbsp;
+                    [&nbsp;<a onclick="goToExternalUrl(this.href);" href="https://kdcinfo.com/blog/">Blog</a>&nbsp;]
+                </div>
+                </div>
+      </div>
+    </header>
+
+    <div class="iframeHeader">
+      <div class="desc desc-main">
+        <strong>KDC-Base</strong> is a chronological showcase of projects I've created in an effort to learn new technologies and have a little fun.
+      </div>
+
+      <div class="desc">
+        <p>
+          <b><u>Tip:</u></b> So that this project listing remains accessible,<br/>
+          <b class="important">clicking a project will launch it in a new (separate) window</b>.
+        </p>
+      </div>
+    </div>
+
+    <div class="iframeHeader">
+      <div class="desc desc-main">
+        <p class="devrefs">
+          <button class="devrefs" onclick="window.open('https://kdcinfo.com/resume/KeithDC_Productivity.pdf', 'kdcNewWindow');">View Productivity Snapshot</button>
+        </p>
+      </div>
+    </div>
+
+    <div class="wrapper" style="display: none;">
+      <div class="wrap">
+        <div role="link" tabindex="0" class="iframeTrigger" data-src="https://cruxially.com"
+          title="cruxially. Free educational web toys and puzzles."
+        >
+          <p>cruxially<br><small class="no-wrap">(Free educational web toys and puzzles)</small></p>
+          <img src="images/splash_cruxially-320-222.png" />
+          <div class="projectData">
+            [2026 Oct] HTML
+          </div>
+        </div>
+      </div>
+
+      <div class="wrap">
+        <div role="link" tabindex="0" class="iframeTrigger" data-src="https://singingorrery.com"
+          title="The Singing Orrery: A musical solar system with a daily game."
+        >
+          <p>The Singing Orrery <small class="no-wrap">(A musical solar system)</small></p>
+          <img src="images/splash_singing-orrery-320.png" />
+          <div class="projectData">
+            [2026 Oct] Nuxt 4: Neon, Clerk, Cloudflare Workers
+          </div>
+        </div>
+      </div>
+
+      <div class="wrap">
+        <div role="link" tabindex="0" class="iframeTrigger" data-src="https://storycore34.com"
+          title="StoryCore34: A web app devoted to productive and positive thought-provoking shares."
+        >
+          <p>StoryCore34 <small class="no-wrap">(sharing stories &amp; thoughts)</small></p>
+          <img src="images/splash_sc34_2026_320.png" />
+          <div class="projectData">
+            [2026 Sep] Nuxt 4: Neon, Clerk, Cloudflare Workers
+          </div>
+        </div>
+      </div>
+
+      <div class="wrap">
+        <div role="link" tabindex="0" class="iframeTrigger" data-src="https://kdcinfo.com/app/dataflow/"
+          title="A Data Clump Flow Analysis Tool"
+        >
+          <p>Data Clump <span class="no-wrap">Flow App <small>(open source)</small></span></p>
+          <img src="images/splash_kdcbase_dataflow_320.png" />
+          <div class="projectData">[2024 Nov <small>(completed)</small>; 2025 Aug <small>(updated)</small>] JavaScript, JSON, localStorage</div>
+        </div>
+      </div>
+
+      <div class="wrap">
+        <div role="link" tabindex="0" class="iframeTrigger" data-src="https://kdcinfo.com/blog/2024/06/23/fun-with-practical-prototyping-project-one/"
+          title="Tic Tac Tuple: An open source, practical prototyping project."
+        >
+          <p>Tic Tac Tuple: A Practical <span class="no-wrap">Prototyping Project <small>(open source)</small></span></p>
+          <img src="images/splash_kdcbase_tic_tac_tuple_320.png" />
+          <div class="projectData">[2024 Apr - 2024 Jun] Flutter, Flutter Bloc</div>
+        </div>
+      </div>
+
+      <div class="wrap hidden">
+        <div role="link" tabindex="0" class="iframeTrigger" data-src="https://kdrecall.com"
+          title="KD-reCall: Mobile App Reminder Collection: Xpired To Be - A reminder app for meds and expirable items. Do you know when your aspirin expires?"
+        >
+          <p>Mobile App: KD-reCall: <span class="no-wrap">Xpired To Be <small>(Android and iOS)</small></span></p>
+          <img src="images/splash_kdrecall_x2b_320_222.png" />
+          <div class="projectData">[2021 Aug - 2021 Sep] Flutter, Dart</div>
+        </div>
+      </div>
+
+      <div class="wrap hidden">
+        <div role="link" tabindex="0" class="iframeTrigger" data-src="https://kdrecall.com"
+          title='KD-reCall: Mobile App Reminder Collection: B4-I-Go - A reminder of things to do before an event or occasion.'
+        >
+          <p>Mobile App: KD-reCall: <span class="no-wrap">B4-I-Go <small>(Android and iOS)</small></span></p>
+          <img src="images/splash_kdrecall_b4_320_222.png" />
+          <div class="projectData">[2021 Apr - 2021 Aug] Flutter, Dart</div>
+        </div>
+      </div>
+
+      <div class="wrap">
+        <div role="link" tabindex="0" class="iframeTrigger" data-src="https://kdrecall.com"
+          title="KD-reCall: Mobile App Reminder Collection: Pilot app (and my first mobile app)."
+        >
+          <p>Mobile App: KD-reCall: <span class="no-wrap">Hungry on Hand <small>(Android and iOS)</small></span></p>
+          <img src="images/splash_kdrecall_hungry_320_222.png" />
+          <div class="projectData">[2020 Jul - 2021 Mar] Flutter, Dart</div>
+        </div>
+      </div>
+
+      <div class="wrap">
+        <div role="link" tabindex="0" class="iframeTrigger" data-src="https://kdcinfo.com/app/wordcount/"
+          title="A custom book length classification and word count tool. Quantify your writings."
+        >
+          <p>Book Length Classification Tool</p>
+          <img src="images/splash_wordcount_320-222.png" />
+          <div class="projectData">[2020 Jan] HTML, CSS, JavaScript</div>
+        </div>
+      </div>
+
+      <div class="wrap">
+        <div role="link" tabindex="0" class="iframeTrigger" data-src="https://kdcinfo.com/blog/2020/01/19/javascript-informational-best-of-the-basics/"
+          title="JavaScript Informational: Best of the Basics."
+        >
+          <p>JavaScript Informational</p>
+          <img src="images/splash_infojs_320-222.png" />
+          <div class="projectData">[2020 Jan] JavaScript, HTML, CSS</div>
+        </div>
+      </div>
+
+      <div class="wrap">
+        <div role="link" tabindex="0" class="iframeTrigger" data-src="https://petrefapp.com"
+          title="Pet Ref App: A customizable reference tool created for veterinarians, their staff, animal educational studies, or for personal pet reference use."
+        >
+          <p>Pet Ref App</p>
+          <img src="images/splash_pra_320-222.png" />
+          <div class="projectData">[2019 Jun-Aug] PHP, JavaScript, JSON, PDO/MySQL, Stripe</div>
+        </div>
+      </div>
+
+      <div class="wrap">
+        <!-- <div role="link" tabindex="0" class="iframeTrigger no-cursor" data-src="https://storycore34.com" title="StoryCore34: A web app devoted to productive thought-provoking shares."> -->
+        <div role="link" tabindex="0" class="iframeTrigger" data-src="https://storycore34.com"
+          title="StoryCore34: A web app devoted to productive thought-provoking shares."
+        >
+          <p>StoryCore34</p>
+          <img src="images/splash_sc34_320.png" />
+          <div class="projectData">[2018; 2025] PHP, JavaScript, JSON, PDO/MySQL</div>
+          <!-- <div class="in-development">In Development<br><small>Target: TBD</small></div> -->
+          <div class="in-development">Completed<br><small>See: 2026 (above)</small></div>
+        </div>
+      </div>
+
+      <div class="wrap">
+        <div role="link" tabindex="0" class="iframeTrigger" data-src="https://kdcinfo.com/app/training/"
+          title="A Training Progress SPA and my first PWA."
+        >
+          <p>Training Progress SPA</p>
+          <img src="images/splash_training_320.jpg" />
+          <div class="projectData">[2018 May-Jul] JavaScript, JSON, CSS3</div>
+        </div>
+      </div>
+
+      <div class="wrap">
+        <div role="link" tabindex="0" class="iframeTrigger" data-src="https://KDCinfo.github.io/expired-to-be-spa/"
+          title="Expired To Be (A Web App (SPA)). A web app in which I married my React alarm app (Done [for Now]) with a Chrome browser extension."
+        >
+          <p>Expired To Be <small>(A Web App (SPA))</small></p>
+          <img src="images/splash_x2b_320.jpg" />
+          <div class="projectData">[2018 Mar-Apr] React, TypeScript, JavaScript</div>
+        </div>
+      </div>
+
+      <div class="wrap">
+        <div role="link" tabindex="0" class="iframeTrigger" data-src="https://github.com/KDCinfo/expired-to-be"
+          title="Expired To Be - My second and most popular Chrome browser extension (2nd of three).)"
+        >
+          <p>Expired To Be <small>(A Chrome Extension)</small></p>
+          <img src="images/splash_x2b_320.jpg" />
+          <div class="projectData">[2018 Feb] JavaScript, Chrome APIs</div>
+        </div>
+      </div>
+      <div class="wrap">
+        <div role="link" tabindex="0" class="iframeTrigger" data-src="https://codepen.io/KeithDC/details/OzdoLv"
+          title="ICDots (a board game for 2-7 players)."
+        >
+          <p>ICDots <small>(A board game for 2-7 players)</small></p>
+          <img src="images/splash_icdots_320.jpg" />
+          <div class="projectData">[2018 Jan] React, TypeScript, JavaScript</div>
+        </div>
+      </div>
+      <div class="wrap">
+        <div role="link" tabindex="0" class="iframeTrigger" data-src="https://codepen.io/KeithDC/full/XVNgQr"
+          title="Simon 20 (a responsive web app game)"
+        >
+          <p>Simon 20 <small>(A memory game)</small></p>
+          <img src="images/splash_simon_320.jpg" />
+          <div class="projectData">[2017 Nov/Dec] React, TypeScript, JavaScript</div>
+        </div>
+      </div>
+      <div class="wrap">
+        <div role="link" tabindex="0" class="iframeTrigger" data-src="https://github.com/KDCinfo/character-counts"
+          title="Character Counts (A Chrome Extension)"
+        >
+          <p>Character Counts <small>(A Chrome Extension)</small></p>
+          <img src="images/splash_character-counts_320.jpg" />
+          <div class="projectData">[2017 Oct] JavaScript</div>
+        </div>
+      </div>
+      <div class="wrap">
+        <div role="link" tabindex="0" class="iframeTrigger" data-src="https://kdcinfo.com/app/done-for-now/"
+          title="Done (for now) (SPA)"
+        >
+          <p>Done (for now) <small>(SPA)</small></p>
+          <img src="images/splash_done-for-now_320.jpg" />
+          <div class="projectData">[2017 Jul/Aug] React, TypeScript, JavaScript</div>
+        </div>
+      </div>
+      <div class="wrap">
+        <div role="link" tabindex="0" class="iframeTrigger" data-src="https://KDCinfo.github.io/react-form-input-date-native/" title="Native Date Input (React Component)">
+          <p>Native Date Input <small>(React Component)</small></p>
+          <img src="images/splash_react-form-input-date-native_320.jpg" />
+          <div class="projectData">[2017 Jun] React, HTML5</div>
+        </div>
+      </div>
+      <div class="wrap">
+        <div role="link" tabindex="0" class="iframeTrigger" data-src="https://KDCinfo.github.io/track-your-cash/" title="Track Your Cash (SPA)">
+          <p>Track Your Cash <small>(SPA)</small></p>
+          <img src="images/splash_register_320.jpg" />
+          <div class="projectData">[2017 Jun] React, Redux, RR4</div>
+        </div>
+      </div>
+
+<!-- Laravel: Blade; Vue -->
+      <div class="wrap hidden">
+        <div role="link" tabindex="0" class="iframeTrigger" data-src="https://kdcinfo.com/guessright/" title="Guess Right (SPA)">
+          <p>Guess Right <small>(SPA)</small></p>
+          <img src="images/splash_guessright_320.jpg" />
+          <div class="projectData">[2017 Apr] Vue 2, Vuex, Vue-Router</div>
+        </div>
+      </div>
+      <div class="wrap hidden">
+        <div role="link" tabindex="0" class="iframeTrigger" data-src="https://kdcinfo.com/pickameal/" title="Pick-a-Meal (Web App)">
+          <p>Pick-a-Meal <small>(Web App)</small></p>
+          <img src="images/splash_pickameal_320.jpg" />
+          <div class="projectData">[2016 Dec] Laravel 5.8, JavaScript, Bootstrap</div>
+        </div>
+      </div>
+      <div class="wrap hidden">
+        <div role="link" tabindex="0" class="iframeTrigger" data-src="https://kdcinfo.com/keeptrack/" title="Keep Track! (Web App)">
+          <p>Keep Track! <small>(Web App)</small></p>
+          <img src="images/splash_keeptrack_320.jpg" />
+          <div class="projectData">[2016 Nov] Laravel 5.8, Blade, MySQL</div>
+        </div>
+      </div>
+
+<!-- Angular -->
+      <div class="wrap">
+        <div role="link" tabindex="0" class="iframeTrigger" data-src="https://kdcinfo.com/db/guitarherosongs/" title="Guitar Hero Songs (SPA)">
+          <p>Guitar Hero Songs <small>(SPA)</small></p>
+          <img src="images/kdcbase_01.jpg" />
+          <div class="projectData">[2014 Aug] AngularJS, PHP, MySQL</div>
+        </div>
+      </div>
+      <div class="wrap">
+        <div role="link" tabindex="0" class="iframeTrigger" data-src="https://kdcinfo.com/db/movies/" title="Movies, Movies, and Games (SPA)">
+          <p>Movies, Movies, and Games <small>(SPA)</small></p>
+          <img src="images/kdcbase_02.jpg" />
+          <div class="projectData">[2014 Sep] AngularJS, PHP, MySQL</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--
+    META ADDED TO DOMAIN
+    ____________________
+    Title:       KDCBase (refresh to return)
+    Description: KDC-Base showcases projects created by Keith D Commiskey (KDC-Info)
+    Keywords:    kdc,kdcbase,kdcinfo,commiskey,reactjs,vuejs,laravel5
+  -->
+  <footer>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script>!window.jQuery && document.write('<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"><\/script>');</script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <!--
+      //ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js
+      //ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js
+    -->
+    <script type="text/javascript">
+      let appDB = {};
+        // appDB.storeStr
+        // appDB.storeObj.darkmode
+
+        // appDB.storeStr = JSON.stringify({ "darkmode": "0" });
+        // sessionStorage.setItem('kdcbase', appDB.storeStr);
+
+      let storeSrc = null; // null (returned by sessionStorage.getItem()) or string
+      let noStoreAccess = null; // Due to being in an iFrame
+
+      function goToHome(thisElem) {
+
+        // thisElem.blur();
+        // goToHome();
+        // setTimeout(() => {
+        //   var thatElem = thisElem;
+        //   thatElem.style = null;
+        //   // thatElem.style.outline = null;
+        // }, 500);
+
+        // [...document.querySelectorAll('.wrap')].find((elem, idx) => { elem.pulse({times: 1, duration: 300}); return idx > 2; });
+        $('.wrap').each((pidx, pelem) => {
+          var elem = pelem,
+            idx = pidx;
+          setTimeout(() => {
+            console.log('ST: ', idx, $(elem));
+            $(elem).pulse({times: 2, duration: 200});
+          }, 700 * idx);
+          return idx < 2;
+        });
+        // document.querySelector('h1').blur();
+      }
+
+      /* ^^^ https://stackoverflow.com/questions/10614521/settimeout-not-working-with-jquery-each-this
+
+        With Closure:
+          function reveal_board() {
+              $("div").each(function(index) {
+                  (function(that, i) {
+                      var t = setTimeout(function() {
+                          $(that).removeClass("invisible");
+                      }, 500 * i);
+                  })(this, index);
+              });
+          }
+
+        Without Closure:
+          function reveal_board() {
+              $("div").each(function(index) {
+                  var that = this;
+                  var t = setTimeout(function() {
+                      $(that).removeClass("invisible");
+                  }, 500 * index);
+              });
+          }
+      */
+
+      function goToExternalUrl(url) {
+        var goToUrl = (typeof(url) === 'undefined') ? 'https://kdcinfo.com' : url;
+        top.location.href = goToUrl;
+        return false;
+      }
+
+      function openNewWindow(urlToOpen, disableFeatures, varsToSend) {
+          var windowFeatures = disableFeatures ? 'menubar=no,resizable=yes,scrollbars=no,status=no,toolbar=no' : '',
+              windowName = 'kdcNewWindow',
+              urlHasUrl = urlToOpen.indexOf('http') >= 0,
+              schem = urlHasUrl ? '' : '//kdcinfo.com/',
+              varPass = (urlHasUrl || varsToSend.length == 0) ? '' : '?SDB=' + varsToSend;
+          window.open(schem + urlToOpen + varPass, windowName, windowFeatures);
+      }
+
+      function initialDBCheck() {
+
+        // let storeSrc = storeSrc || null; // null (returned by sessionStorage.getItem()) or string
+
+        try {
+
+          // if (typeof window.sessionStorage !== 'undefined') {
+          //   storeSrc = sessionStorage.getItem('kdcinfo');
+          if (typeof window.localStorage !== 'undefined') {
+            storeSrc = localStorage.getItem('kdcinfo');
+          // } else {
+            // alert('Your browsing device has no storage (i.e., no data persistence.) ' +
+            //   'You can still run the app, but nothing will be saved when you leave.');
+          }
+          if (storeSrc === null || typeof storeSrc === 'undefined') {
+            appDB.storeStr = JSON.stringify({ "darkmode": "0" });
+            // sessionStorage.setItem('kdcinfo', appDB.storeStr);
+            localStorage.setItem('kdcinfo', appDB.storeStr);
+          } else {
+            appDB.storeStr = storeSrc;
+          }
+          appDB.storeObj = JSON.parse(appDB.storeStr);
+          setDarkmode();
+        } catch(e) {
+          // console.log('No access to sessionStorage.');
+          if (noStoreAccess === null || appDB.storeObj === null || typeof appDB.storeObj === 'undefined') {
+            noStoreAccess = true; // Only checking for null; can set to anything non-null.
+            appDB.storeStr = JSON.stringify({ "darkmode": "0" }); // Initialize
+          }
+          appDB.storeObj = JSON.parse(appDB.storeStr);
+          setDarkmode();
+        }
+      }
+
+      function toggleDarkmode() {
+        appDB.storeObj.darkmode = appDB.storeObj.darkmode === "1" ? "0" : "1";
+        // Set it in sessionStorage
+        appDB.storeStr = JSON.stringify(appDB.storeObj);
+        if (!noStoreAccess) {
+          // sessionStorage.setItem('kdcinfo', appDB.storeStr);
+          localStorage.setItem('kdcinfo', appDB.storeStr);
+        }
+        setDarkmode();
+      }
+
+      function setDarkmode() {
+        // document.getElementById('BaseBody').style.backgroundColor = appDB.storeObj.darkmode === "1" ? "#000" : null;
+        if (appDB.storeObj.darkmode === "1") {
+          document.getElementById('BaseBody').classList.add('darkmode');
+        } else {
+          document.getElementById('BaseBody').classList.remove('darkmode');
+        }
+      }
+
+      // [app.js] (function ($) { $.fn.pulse = ... }(jQuery));
+      $(function($) {
+        "use strict";
+
+          $.fn.pulse = function(options) {
+              var options = $.extend({
+                  times: 3,
+                  duration: 1000
+              }, options);
+
+              var period = function(callback) {
+                  $(this).animate({opacity: 0.5}, options.duration, function() {
+                      $(this).animate({opacity: 1}, options.duration, callback);
+                  });
+              };
+              return this.each(function() {
+                  var i = +options.times, self = this,
+                  repeat = function() { --i && period.call(self, repeat) };
+                  period.call(this, repeat);
+              });
+          };
+
+        // https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_link_role
+        const sap = {ui:{keycodes:{SPACE:32, ENTER:13 }}};
+        $('.toggle-mode').on('mouseup', function(e) {
+          toggleDarkmode();
+        });
+
+        // $('.iframeTrigger').on('selectstart mouseup keydown', function (e) {
+        $('.iframeTrigger').on('mouseup keydown', function (e) {
+
+          // console.log('keyCode', e, e.type, e.keyCode);
+
+          if (e.type != 'keydown' || (e.type == 'keydown' && (e.keyCode == sap.ui.keycodes.SPACE || e.keyCode == sap.ui.keycodes.ENTER))) {
+            e.preventDefault();
+
+            var thisDataSrc = $(this).data('src');
+
+            if (thisDataSrc.indexOf('kdcbase') < 0) { // -1
+
+              // window.location.href = thisDataSrc;
+              openNewWindow(thisDataSrc, false, '');
+                // Why a new window?
+                // Although kdcbase runs inside a <frame>, once one of my apps is brought up,
+                // because it feels like you're actually on that app's site,
+                // I felt folks would begin actually navigating inside the <frame>.
+            }
+            $(this).blur();
+            return false;
+          }
+        });
+
+         // top.document.title = 'Welcome to KDC-Base';
+        setTimeout(function() {
+          $('.wrapper').fadeIn('slow');
+          initialDBCheck();
+        }, 500);
+      });
+    </script>
+  </footer>
+</body>
+</html>
